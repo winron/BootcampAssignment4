@@ -89,7 +89,7 @@ exports.delete = function(req, res) {
 exports.list = function(req, res) {
   /** TODO **/
   /* Your code here */
- Listing.find().sort('code').exec(function (err, listings) {
+ Listing.find().sort('code').exec(function (err, listing) {
     if(err) {
 
       res.status(400).send(err);
