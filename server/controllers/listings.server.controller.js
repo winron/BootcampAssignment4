@@ -75,6 +75,7 @@ exports.delete = function(req, res) {
 
   /** TODO **/
   /* Remove the article */
+
   listing.remove(function(err) {
     if (err) {
       res.status(400).send(err);
@@ -89,13 +90,13 @@ exports.delete = function(req, res) {
 exports.list = function(req, res) {
   /** TODO **/
   /* Your code here */
- Listing.find().sort('code').exec(function (err, listing) {
+ Listing.find().sort('code').exec(function (err, listings) {
     if(err) {
-
+console.log(err);
       res.status(400).send(err);
     }
     else {
-      res.json(listing);
+      res.json(listings);
     }
   });
 };
