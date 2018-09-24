@@ -89,7 +89,7 @@ exports.delete = function(req, res) {
 exports.list = function(req, res) {
   /** TODO **/
   /* Your code here */
-mongoose.model('Listing', Listing.listingSchema).find({}, function(err, listing) {
+ Listing.find().sort('code').exec(function (err, listings) {
     if(err) {
 
       res.status(400).send(err);
