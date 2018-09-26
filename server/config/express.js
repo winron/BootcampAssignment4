@@ -19,6 +19,7 @@ module.exports.init = function() {
 
   //body parsing middleware
   app.use(bodyParser.json());
+    app.use(cors());
 
 
   /**TODO
